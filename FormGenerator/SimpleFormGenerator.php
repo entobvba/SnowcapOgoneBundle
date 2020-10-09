@@ -62,7 +62,7 @@ class SimpleFormGenerator implements FormGenerator
         $this->paymentRequest = $paymentRequest;
 
         // TODO: make this part slightly more flexible or generate only hidden fields ?
-        $template = $this->environment->loadTemplate('SnowcapOgoneBundle::form.html.twig');
+        $template = $this->environment->loadTemplate('@SnowcapOgone/form.html.twig');
 
         return $template->render(array('parameters' => $this->getParameters(), 'ogone_uri' => $this->getOgoneUri(), 'sha_sign' => $this->getShaSign(), 'show_submit' => $this->showSubmitButton, 'form_name' => $this->formName));
     }
