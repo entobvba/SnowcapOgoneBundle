@@ -13,4 +13,4 @@ services:
     snowcap_ogone.form_generator:
         class: Snowcap\OgoneBundle\FormGenerator\SimpleFormGenerator
         arguments: ['@twig', '%kernel.root_dir%']
-        private: true
+        public: true
